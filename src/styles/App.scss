@@ -97,13 +97,8 @@ main {
   text-align: center;
   align-items: center;
   justify-content: center;
-  min-height: 50vh;
   font-size: 1.5rem;
   color: $gray40;
-}
-
-form {
-  margin-bottom: $spacing-xs;
 }
 
 .full-width {
@@ -127,4 +122,30 @@ form {
 .sidebar {
   flex-grow: 1;
 
+}
+
+.books--wishList{
+  padding: 0;
+  margin: 20px;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flex-item {
+  padding: 10px;
+  border: 2px solid gray;
+  margin: 20px;
+  color: black;
+  text-align: center;
+}
+.book-details {
+  display: flex;
+}
+
+.books-list:first-child { flex-basis: calc(66.66% - 10px); }
+
+@media (max-width: 736px) {
+  .books-list { flex-basis: calc(100% - 10px); }
+  .books-list:first-child { flex-grow: 1; }
 }
