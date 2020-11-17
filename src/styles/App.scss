@@ -99,6 +99,8 @@ main {
   justify-content: center;
   font-size: 1.5rem;
   color: $gray40;
+  border: 2px solid gray;
+  margin: 20px;
 }
 
 .full-width {
@@ -141,6 +143,9 @@ main {
 }
 .book-details {
   display: flex;
+}
+h2 { 
+  border: 2px solid gray;
 }
 
 .books-list:first-child { flex-basis: calc(56.66% - 10px); }
