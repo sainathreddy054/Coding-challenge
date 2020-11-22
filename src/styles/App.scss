@@ -100,7 +100,7 @@ main {
   font-size: 1.5rem;
   color: $gray40;
   border: 2px solid gray;
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .full-width {
@@ -111,10 +111,8 @@ main {
   margin-top: .5rem;
 }
 .book--container {
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content:space-around;
-  align-items: stretch;
+  flex-basis: calc(56.66% - 10px);
+  padding: 10px;
 }
 
 .search-params {
@@ -125,32 +123,44 @@ main {
   flex-grow: 1;
 
 }
+.books-wishlist-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: auto;
+  width: 80%;
+  padding: 10px;
+}
 
-.books--wishList{
+.available-books-container{
   padding: 0;
-  margin: 20px;
   list-style: none;
   display: flex;
   flex-wrap: wrap;
+  overflow: auto;
+  max-height: 100vh;
 }
 
 .flex-item {
   padding: 10px;
   border: 2px solid gray;
-  margin: 20px;
+  margin-top: 20px;
   color: black;
   text-align: center;
+  width: 100%;
 }
 .book-details {
   display: flex;
 }
 h2 { 
   border: 2px solid gray;
+  padding: 10px;
 }
 
-.books-list:first-child { flex-basis: calc(56.66% - 10px); }
-
 @media (max-width: 736px) {
+  .books-wishlist-section {
+    width: 100%;
+  }
   .books-list { flex-basis: calc(100% - 10px); }
   .books-list:first-child { flex-grow: 1; }
 }

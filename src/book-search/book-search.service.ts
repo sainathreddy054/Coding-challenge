@@ -9,6 +9,7 @@ export async function getBooksByType(type: string) {
             }
         });
     } catch(exception) {
+        console.log('Error: sorry something went wrong', exception);
         return [];
 
     }
