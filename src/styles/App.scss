@@ -156,6 +156,15 @@ h2 {
   border: 2px solid gray;
   padding: 10px;
 }
+.ui-hidden-accessible {
+  position: absolute;
+  left: -1000in;
+  top: auto;
+  height: 0px; 
+  width: 0px; 
+  overflow: hidden;
+  clip: rect(0px, 0px, 0px, 0px); 
+}
 
 @media (max-width: 736px) {
   .books-wishlist-section {

@@ -65,6 +65,7 @@ const BookSearch = () => {
                       updateBookTypeToSearch("Javascript");
                     }}
                     href="/#"
+                    role="button"
                   >
                     {" "}
                     "Javascript"
@@ -74,15 +75,15 @@ const BookSearch = () => {
             )}
           </div>
         </div>
-        <div className="available-books-container">
+        <div className="available-books-container" role="group" tabIndex={-1}>
           {allAvailableBooks.items && allAvailableBooks.items.length > 0 && (
-            <div className="books-list flex-item">
+            <div className="books-list flex-item" aria-live="polite">  
               {allAvailableBooks.items.map((book: any, index) => {
                 return (
-                  <div key={index}>
-                    <div className="book-details">
+                  <div key={index}> 
+                    <div className="book-details" > 
                       <img
-                        alt={`${book.volumeInfo.title} book`}
+                        alt=""
                         src={`http://books.google.com/books/content?id=${book.id}&printsec=frontcover&img=1&zoom=1&source=gbs_api`}
                       />
                       <div>
@@ -101,7 +102,8 @@ const BookSearch = () => {
                             ]);
                           }}
                         >
-                          Add this book to wishlist
+                          Add book <span className="ui-hidden-accessible"> {book.volumeInfo.title} </span> to wishlist
+                          
                         </button>
                       </div>
                     </div>
